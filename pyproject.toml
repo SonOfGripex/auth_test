@@ -1,0 +1,22 @@
+[project]
+name = "auth-test"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "aerich>=0.9.1",
+    "asyncpg>=0.30.0",
+    "bcrypt>=4.3.0",
+    "fastapi[all]>=0.116.1",
+    "pyjwt[crypto]==2.10.1",
+    "password>=0.2",
+    "password-validator>=1.0",
+    "pydantic>=2.11.7",
+    "pydantic-settings>=2.10.1",
+    "tortoise-orm>=0.25.1",
+]
+
+[tool.aerich]
+tortoise_orm = "app.config.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
